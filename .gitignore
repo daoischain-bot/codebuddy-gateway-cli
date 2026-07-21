@@ -1,0 +1,11 @@
+# Binaries
+cb-router
+buddy
+
+# Config
+.env
+
+# Go
+*.exe
+*.test
+*.out
