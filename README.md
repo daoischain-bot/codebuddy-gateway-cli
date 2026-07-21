@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/go-1.23+-00ADD8?style=flat-square&logo=go" alt="Go">
   <img src="https://img.shields.io/badge/binary-11MB-blue?style=flat-square" alt="Binary Size">
   <img src="https://img.shields.io/badge/port-2069-orange?style=flat-square" alt="Port">
-  <img src="https://img.shields.io/badge/models-34-purple?style=flat-square" alt="Models">
+  <img src="https://img.shields.io/badge/models-36-purple?style=flat-square" alt="Models">
 </p>
 
 ---
@@ -116,7 +116,7 @@ PROXY=socks5://user:pass@proxy.example.com:1080
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/health` | GET | Health check + key count + model count |
-| `/v1/models` | GET | List all 34 available models |
+| `/v1/models` | GET | List all 36 available models |
 | `/v1/chat/completions` | POST | Forward request to CodeBuddy API |
 
 ### Health Check
@@ -146,7 +146,7 @@ curl http://localhost:2069/v1/chat/completions \
 ## 🧠 Available Models
 
 <details>
-<summary><b>Click to expand full model list (35 models)</b></summary>
+<summary><b>Click to expand full model list (36 models)</b></summary>
 
 **Claude**
 
@@ -157,12 +157,20 @@ curl http://localhost:2069/v1/chat/completions \
 
 **GPT**
 
+- `gpt-5.6-luna`
+- `gpt-5.6-sol`
+- `gpt-5.6-terra`
 - `gpt-5.5`
 - `gpt-5.4`
 - `gpt-5.3-codex`
 - `gpt-5.2-codex`
 - `gpt-5.2`
+- `gpt-5.1-codex-max`
+- `gpt-5.1-codex-mini`
+- `gpt-5.1-codex`
 - `gpt-5.1`
+- `gpt-5-codex`
+- `gpt-4.1`
 
 **Gemini**
 
@@ -178,12 +186,9 @@ curl http://localhost:2069/v1/chat/completions \
 
 - `glm-5.2`
 - `glm-5.1`
-- `glm-5.0`
 - `glm-5v-turbo`
-- `glm-5.0-turbo`
-- `glm-4.7`
+- `glm-5.0`
 - `glm-4.6`
-- `glm-4.6v`
 
 **Kimi**
 
@@ -193,15 +198,14 @@ curl http://localhost:2069/v1/chat/completions \
 
 **DeepSeek**
 
-- `deepseek-v4-pro`
-- `deepseek-v4-flash`
-- `deepseek-v3.1`
+- `deepseek-v3.2`
 
-**Others**
+**MiniMax**
 
-- `minimax-m2.5`
-- `minimax-m2.7`
-- `hunyuan-2.0-instruct`
+- `minimax-m3`
+
+**Reasoning**
+
 - `o4-mini`
 
 </details>
@@ -217,7 +221,7 @@ codebuddy-router/
 │   ├── config/
 │   │   └── config.go          # .env loader + machine key generator
 │   ├── router/
-│   │   ├── models.go          # 34 model registry
+│   │   ├── models.go          # 36 model registry
 │   │   ├── proxy.go           # HTTP forwarding + proxy
 │   │   ├── rotate.go          # Round-robin key pool
 │   │   └── server.go          # HTTP handlers + auth
@@ -236,7 +240,7 @@ CodeBuddy CLI Gateway
 ───────────────────────────────────────────────────────────────
 
   Base URL  : http://0.0.0.0:2069/v1
-  Models    : 34
+  Models    : 36
   Keys      : 1 (1 active)
   API Key   : rtr_16c9369819187db59273446de1a4eaf84dd3191e14d77d21
 
