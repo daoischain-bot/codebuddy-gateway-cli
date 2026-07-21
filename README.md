@@ -31,7 +31,8 @@
 ### Install Global Command
 
 ```bash
-sudo cp cb-router /usr/local/bin/buddy
+sudo cp buddy /usr/local/bin/buddy
+sudo chmod +x /usr/local/bin/buddy
 ```
 
 ### Run
