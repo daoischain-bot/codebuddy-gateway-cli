@@ -43,6 +43,7 @@ var Models = map[string]Model{
 	"glm-4.6v":      {"glm-4.6v", "GLM 4.6V", 200000, 48000, true},
 
 	// Kimi
+	"kimi-k3":  {"kimi-k3", "Kimi K3", 128000, 8192, false},
 	"kimi-k2.6": {"kimi-k2.6", "Kimi K2.6", 128000, 8192, false},
 	"kimi-k2.5": {"kimi-k2.5", "Kimi K2.5", 128000, 8192, false},
 

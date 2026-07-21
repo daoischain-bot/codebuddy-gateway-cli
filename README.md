@@ -146,7 +146,7 @@ curl http://localhost:2069/v1/chat/completions \
 ## 🧠 Available Models
 
 <details>
-<summary><b>Click to expand full model list (34 models)</b></summary>
+<summary><b>Click to expand full model list (35 models)</b></summary>
 
 **Claude**
 
@@ -187,6 +187,7 @@ curl http://localhost:2069/v1/chat/completions \
 
 **Kimi**
 
+- `kimi-k3`
 - `kimi-k2.6`
 - `kimi-k2.5`
 
